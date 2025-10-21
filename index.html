@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home of flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1 class="museum-logo">🌺</h1>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>Home of fowers</h1>
+                    <p class="subtitle">The Home of Flowers</p>
+                </div>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#gallery" class="nav-link">Hall of flowers</a></li>
+                    <li><a href="#history" class="nav-link">History</a></li>
+                    <li><a href="#dictionary" class="nav-link">Dictionary</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-toggle">☰</button>
+        </div>
+    </header>
+
+  
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Maligayang Pagdating</h2>
+            <p class="hero-subtitle">Isang museo kung saan ang mga bulaklak ng Pilipinas ay umuusbong magpakailanman</p>
+            <p class="hero-tagline">"Preserving beauty, meaning, and memory – one flower at a time"</p>
+            <button class="cta-button" onclick="scrollToSection('gallery')">Click to start</button>
+        </div>
+        <div class="falling-petals" id="petals-container"></div>
+    </section>
+
+    
+    <section class="flower-of-day">
+        <div class="container">
+            <h3>🌸 Bulaklak ng Araw</h3>
+            <div class="fotd-content" id="fotd-content">
+                <img class="fotd-image" id="fotd-image" src="" alt="Flower of the Day">
+                <div class="fotd-info">
+                    <h4 id="fotd-name">Gumamela</h4>
+                    <p id="fotd-meaning" class="fotd-meaning">Simbolo ng kagandahan at kadalisayan</p>
+                    <p id="fotd-quote" class="fotd-quote">"Ang tunay na ganda ay mula sa puso."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Bulwagan ng mga Bulaklak</h2>
+            <p class="section-subtitle">Virtual Flower Gallery - Explore by Theme</p>
+            
+            <div class="theme-tabs">
+                <button class="theme-tab active" data-theme="pagibig">💕 Pag-ibig</button>
+                <button class="theme-tab" data-theme="paggalang">🙏 Paggalang</button>
+                <button class="theme-tab" data-theme="kalungkutan">🕊️ Kalungkutan</button>
+                <button class="theme-tab" data-theme="kasiyahan">☀️ Kasiyahan</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                
+            </div>
+        </div>
+    </section>
+
+ 
+    <div id="flower-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <img class="modal-image" id="modal-image" src="" alt="Flower">
+                <div class="modal-info">
+                    <h3 id="modal-name">Flower Name</h3>
+                    <p class="modal-tagalog" id="modal-tagalog">Tagalog Name</p>
+                    <div class="modal-meaning">
+                        <h4>Kahulugan</h4>
+                        <p id="modal-meaning"></p>
+                    </div>
+                    <div class="modal-significance">
+                        <h4>Kahalagahan sa Kulturang Pilipino</h4>
+                        <p id="modal-significance"></p>
+                    </div>
+                    <div class="modal-location">
+                        <h4>📍 Kung Saan Tumutubo</h4>
+                        <p id="modal-location"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section id="history" class="history-section">
+        <div class="container">
+            <h2 class="section-title">Kasaysayan ng mga Bulaklak sa Pilipinas</h2>
+            <p class="section-subtitle">A journey through time and tradition</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">🌿</div>
+                    <div class="timeline-content">
+                        <h3>Panahon Bago ang Kolonisasyon</h3>
+                        <p class="timeline-date">Pre-1521</p>
+                        <p>Ang mga sinaunang Pilipino ay gumagamit ng mga bulaklak sa mga ritwal at pagsamba sa kalikasan. Ang mga bulaklak ay itinuturing na sagrado at konektado sa mga diwata at espiritu.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">✝️</div>
+                    <div class="timeline-content">
+                        <h3>Panahon ng Kastila</h3>
+                        <p class="timeline-date">1521-1898</p>
+                        <p>Naging bahagi ng mga relihiyosong handog ang mga bulaklak. Nag-umpisa ang tradisyon ng Flores de Mayo, kung saan ginagamit ang sampaguita at iba pang puting bulaklak bilang alay sa Birhen Maria.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">🇵🇭</div>
+                    <div class="timeline-content">
+                        <h3>Sampaguita bilang Pambansang Bulaklak</h3>
+                        <p class="timeline-date">1934</p>
+                        <p>Ang sampaguita ay itinalaga bilang pambansang bulaklak ng Pilipinas, sumasagisag sa kadalisayan, paggalang, at simpleng kagandahan ng Pilipino.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">🎉</div>
+                    <div class="timeline-content">
+                        <h3>Modernong Pagdiriwang</h3>
+                        <p class="timeline-date">Kasalukuyan</p>
+                        <p>Patuloy na ginagamit ang mga bulaklak sa Araw ng mga Puso, kasal, libing, at iba't ibang pagdiriwang. Ang kultura ng pagbibigay ng bulaklak ay nananatiling malakas sa Pilipinas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="dictionary" class="dictionary-section">
+        <div class="container">
+            <h2 class="section-title">Hall of Flowers</h2>
+            
+            <div class="search-box">
+                <input type="text" id="flower-search" placeholder="Maghanap ng bulaklak...">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="dictionary-grid" id="dictionary-grid">
+              
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Trivia: Alam mo ba?</h2>
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-question">
+                    <p id="quiz-question-text">Anong bulaklak ang pambansang bulaklak ng Pilipinas?</p>
+                </div>
+                <div class="quiz-options">
+                    <button class="quiz-option" data-answer="wrong">Rosas</button>
+                    <button class="quiz-option" data-answer="correct">Sampaguita</button>
+                    <button class="quiz-option" data-answer="wrong">Gumamela</button>
+                    <button class="quiz-option" data-answer="wrong">Orkidyas</button>
+                </div>
+                <div class="quiz-result" id="quiz-result"></div>
+                <button class="quiz-next" id="quiz-next" style="display:none;">Susunod na Tanong</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

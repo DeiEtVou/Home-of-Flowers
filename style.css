@@ -140,7 +140,10 @@ body {
 .hero-section {
     position: relative;
     height: 90vh;
-    background: linear-gradient(135deg, rgba(255, 228, 225, 0.9) 0%, rgba(255, 182, 193, 0.9) 50%, rgba(221, 160, 221, 0.9) 100%);
+    background-image: url('https://tse3.mm.bing.net/th/id/OIP.MW5m-6hV3C-FHSwXKxQECwHaFP?rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,8 +156,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(139,69,19,0.1)"/></svg>');
-    background-size: 50px 50px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .hero-content {
@@ -162,6 +164,9 @@ body {
     text-align: center;
     z-index: 2;
     padding: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .hero-title {
@@ -199,29 +204,6 @@ body {
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
-}
-
-/* Falling Petals Animation */
-.falling-petals {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.petal {
-    position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.7;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh) rotate(360deg);
-    }
 }
 
 /* Flower of the Day */

@@ -129,7 +129,6 @@ const flowersData = {
     ]
 };
 
-
 const flowerOfDay = [
     {
         name: "Gumamela",
@@ -156,7 +155,6 @@ const flowerOfDay = [
         quote: "Harapin ang araw at mamuhay nang may ngiti."
     }
 ];
-
 
 const quizQuestions = [
     {
@@ -188,7 +186,6 @@ const quizQuestions = [
 
 let currentQuizIndex = 0;
 
-
 const loadingScreen = document.getElementById('loading-screen');
 const mobileToggle = document.getElementById('mobile-toggle');
 const mainNav = document.getElementById('main-nav');
@@ -199,30 +196,26 @@ const modal = document.getElementById('flower-modal');
 const modalClose = document.querySelector('.modal-close');
 const dictionaryGrid = document.getElementById('dictionary-grid');
 const flowerSearch = document.getElementById('flower-search');
-const petalsContainer = document.getElementById('petals-container');
-
 
 document.addEventListener('DOMContentLoaded', () => {
-   
+    // Hide loading screen
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
     }, 1500);
 
-   
+    // Set flower of the day
     setFlowerOfDay();
 
-  
-    createFallingPetals();
-
-  
+    // Load gallery
     loadGallery('pagibig');
 
-    
+    // Load dictionary
     loadDictionary();
 
-   
+    // Load quiz
     loadQuiz();
 
+    // Event listeners
     mobileToggle.addEventListener('click', toggleMobileMenu);
     themeTabs.forEach(tab => tab.addEventListener('click', handleThemeTab));
     modalClose.addEventListener('click', closeModal);
@@ -245,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     flowerSearch.addEventListener('input', filterDictionary);
 
-  
+    // Smooth scroll for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -256,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 function toggleMobileMenu() {
     mainNav.classList.toggle('active');
@@ -278,19 +270,6 @@ function setFlowerOfDay() {
     document.getElementById('fotd-quote').textContent = flower.quote;
     document.getElementById('fotd-image').src = flower.image;
     document.getElementById('fotd-image').alt = flower.name;
-}
-
-function createFallingPetals() {
-    const petals = ['🌸', '🌺', '🌼', '🌻', '🌷'];
-    for (let i = 0; i < 15; i++) {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
-        petal.textContent = petals[Math.floor(Math.random() * petals.length)];
-        petal.style.left = Math.random() * 100 + '%';
-        petal.style.animationDuration = (Math.random() * 3 + 5) + 's';
-        petal.style.animationDelay = Math.random() * 5 + 's';
-        petalsContainer.appendChild(petal);
-    }
 }
 
 function handleThemeTab(e) {
@@ -413,7 +392,7 @@ function checkAnswer(selectedIndex) {
     };
 }
 
-
+// Header shadow on scroll
 window.addEventListener('scroll', () => {
     const header = document.getElementById('main-header');
     if (window.scrollY > 100) {
